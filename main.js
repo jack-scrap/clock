@@ -13,7 +13,7 @@ function turn() {
 	}, 1000);
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
 	hand = document.getElementById('hand');
 
 	turn();
