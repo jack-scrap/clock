@@ -1,11 +1,17 @@
 const offset = -90;
 
+const rotDeg = 360;
+
+const sec = 60;
+
+const stride = rotDeg / sec;
+
 var hand;
 var i = 0;
 
 function turn() {
 	setTimeout(function() {
-		hand.setAttribute('transform', `translate(50 50) rotate(${offset + i} 0 0)`);
+		hand.setAttribute('transform', `translate(50 50) rotate(${offset + (i * stride)} 0 0)`);
 
 		i++;
 
