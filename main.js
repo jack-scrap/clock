@@ -12,11 +12,11 @@ var hand;
 var i = 0;
 
 function turn() {
+	hand.setAttribute('transform', `translate(${rad} ${rad}) rotate(${offset + (i * stride)} 0 0)`);
+
+	i++;
+
 	setTimeout(function() {
-		hand.setAttribute('transform', `translate(${rad} ${rad}) rotate(${offset + (i * stride)} 0 0)`);
-
-		i++;
-
 		turn();
 	}, 1000);
 }
