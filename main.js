@@ -1,7 +1,20 @@
+const offset = -90;
+
+var hand;
+var i = 0;
+
+function turn() {
+	setTimeout(function() {
+		hand.setAttribute('transform', `translate(50 50) rotate(${offset + i} 0 0)`);
+
+		i++;
+
+		turn();
+	}, 1000);
+}
+
 document.addEventListener('DOMContentLoaded', function () {
-	let hand = document.getElementById('hand');
+	hand = document.getElementById('hand');
 
-	const offset = -90;
-
-	hand.setAttribute('transform', `translate(50 50) rotate(${offset + 30} 0 0)`);
+	turn();
 });
